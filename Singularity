@@ -32,15 +32,4 @@ mkdir -p /mnt/ffs17
 mkdir -p /mnt/local
 mkdir -p /mnt/ls15
 mkdir -p /opt/software
- 
-################################################################################
-# Run the user's login shell, or a user specified command
-################################################################################
-%runscript
-SHELL="$(getent passwd $USER | awk -F: '{print $NF}')"
-SHELL=${SHELL:-/bin/bash}
-if [[ "$@" == "" ]]; then
-  exec env -i TERM="$TERM" HOME="$HOME" $SHELL -l
-else
-  exec env -i TERM="$TERM" HOME="$HOME" $@
-fi
+
