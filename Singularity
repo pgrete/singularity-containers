@@ -23,7 +23,7 @@ From: nvidia/cuda:9.0-runtime-centos7
 #yum -y install vim
 curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.rpm.sh | bash
 yum -y install wget gitlab-runner numpy bc hwloc
-yum groupinstall 'Development Tools'
+yum -y groupinstall 'Development Tools'
 wget http://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-repo-rhel7-9.0.176-1.x86_64.rpm
 yum clean all
 yum -y install cuda-libraries-dev-9-0.x86_64 cuda-nvml-dev-9-0.x86_64 cuda-minimal-build-9-0.x86_64 cuda-command-line-tools-9-0.x86_64 cuda-core-9-0=9.0.176.3-1 cuda-cublas-dev-9-0=9.0.176.4-1
