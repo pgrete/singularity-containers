@@ -3,7 +3,7 @@
 ################################################################################
  
 BootStrap: docker
-From: nvidia:cuda/9.0-runtime-centos7
+From: nvidia/cuda:9.0-runtime-centos7
  
 ################################################################################
 # Copy any necessary files into the container
